@@ -4,6 +4,8 @@ body > .container {
     background-color: var(--darker-color);
     box-sizing: border-box;
     padding: 1.25rem calc((100% - 1100px) / 2);
+    display: block;
+    overflow: hidden;
 }
 
 @media only screen and (max-width: 1000px) {

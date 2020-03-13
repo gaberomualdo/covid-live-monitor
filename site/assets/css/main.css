@@ -4,4 +4,6 @@
 @import 'abstracts/global.css';
 
 @import 'components/container.css';
+@import 'components/row.css';
+@import 'components/panel.css';
 @import 'components/masthead.css';

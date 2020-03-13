@@ -1,0 +1,15 @@
+.panel {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    background-color: var(--dark-color);
+    border-radius: 4px;
+    box-shadow: 0 0.15rem 1rem var(--shadow-color);
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+.panel:not(:last-child) {
+    margin-bottom: 1.25rem;
+}

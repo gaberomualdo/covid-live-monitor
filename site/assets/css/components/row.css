@@ -1,0 +1,5 @@
+.container > .row {
+    display: block;
+    width: 100%;
+    height: auto;
+}
