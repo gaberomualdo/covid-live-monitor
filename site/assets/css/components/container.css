@@ -1,0 +1,19 @@
+body > .container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--darker-color);
+    box-sizing: border-box;
+    padding: 1.25rem calc((100% - 1100px) / 2);
+}
+
+@media only screen and (max-width: 1000px) {
+    body > .container {
+        padding: 1.25rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body > .container {
+        padding: 1rem;
+    }
+}
