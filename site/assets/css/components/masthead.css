@@ -1,0 +1,12 @@
+.masthead {
+    height: 4rem;
+    margin-bottom: 1.75rem;
+}
+.masthead .title {
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1.85rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+}

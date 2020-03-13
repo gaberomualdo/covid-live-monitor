@@ -1,0 +1,13 @@
+.col {
+    width: var(--col-width);
+    display: block;
+    float: left;
+}
+.col:not(:last-child) {
+    margin-right: 1rem;
+}
+
+/* center col is larger than others and fits full width */
+.col.center {
+    width: calc(100% - (var(--col-width) * 2) - (1rem * 2));
+}

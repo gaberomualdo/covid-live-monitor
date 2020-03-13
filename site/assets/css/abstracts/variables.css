@@ -22,4 +22,9 @@
 
     --shadow-color: rgba(38, 50, 56, 0.625);
     --light-shadow-color: rgba(55, 71, 79, 0.2);
+
+    /* NOTE: when replacing container width, replace media queries in components/container.css to match */
+    --container-width: 1200px;
+
+    --col-width: 17rem;
 }
