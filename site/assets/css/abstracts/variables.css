@@ -1,4 +1,6 @@
 :root {
+    --theme-color: #b80000;
+
     --regular-color: #78909c;
     --white-color: #ffffff;
 
@@ -26,5 +28,6 @@
     /* NOTE: when replacing container width, replace media queries in components/container.css to match */
     --container-width: 1200px;
 
-    --col-width: 17rem;
+    --col-left-width: 16rem;
+    --col-right-width: 20rem;
 }

@@ -7,7 +7,13 @@
     margin-right: 1rem;
 }
 
-/* center col is larger than others and fits full width */
+/* width of each column */
+.col.left {
+    width: var(--col-left-width);
+}
+.col.right {
+    width: var(--col-right-width);
+}
 .col.center {
-    width: calc(100% - (var(--col-width) * 2) - (1rem * 2));
+    width: calc(100% - (var(--col-left-width) + var(--col-right-width)) - (1rem * 2));
 }

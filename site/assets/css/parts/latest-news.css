@@ -1,0 +1,88 @@
+.panel.latest-news {
+    max-height: calc(100vh - 8rem);
+    overflow-y: scroll;
+    position: relative;
+    padding-top: 0;
+}
+
+.panel.latest-news > .top {
+    position: sticky;
+    top: 0;
+    background-color: var(--dark-color);
+    padding-top: 1rem;
+    z-index: 99999999999;
+}
+.panel.latest-news .panel-title {
+    margin-bottom: 0.5rem;
+}
+
+/* select country */
+.panel.latest-news .select-country {
+    height: 1.25rem;
+    font-size: 0.8rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--white-color);
+}
+.panel.latest-news .select-country * {
+    display: block;
+    float: left;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    font-size: 0.7rem;
+}
+
+.panel.latest-news .select-country span {
+    margin-right: 0.5rem;
+}
+
+.panel.latest-news .select-country select {
+    border: none;
+    background-color: transparent;
+    border: 1px solid var(--white-color);
+    border-radius: 4px;
+}
+
+/* news list */
+.panel.latest-news .news-list .article {
+    display: block;
+    overflow: hidden;
+    padding: 0.25rem 0;
+    padding-bottom: 1rem;
+    text-decoration: none;
+    border-top: 1px solid var(--medium-color);
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+.panel.latest-news .news-list .article:hover {
+    opacity: 1;
+}
+.panel.latest-news .news-list .article:first-child {
+    border: none;
+}
+
+.panel.latest-news .news-list .article .top {
+    height: 2.5rem;
+    font-size: 0.9rem;
+}
+.panel.latest-news .news-list .article .top * {
+    line-height: 2.5rem;
+    display: block;
+    float: right;
+}
+.panel.latest-news .news-list .article .top em {
+    float: left;
+    opacity: 0.7;
+}
+
+.panel.latest-news .news-list .article .main-picture {
+    width: 100%;
+    max-height: 10rem;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.panel.latest-news .news-list .article .title {
+    line-height: 1.35;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    font-weight: 600;
+}

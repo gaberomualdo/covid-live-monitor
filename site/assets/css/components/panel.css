@@ -13,3 +13,10 @@
 .panel:not(:last-child) {
     margin-bottom: 1.25rem;
 }
+
+.panel .panel-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.15;
+    font-size: 1.3rem;
+}

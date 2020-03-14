@@ -1,7 +1,14 @@
 .masthead {
-    height: 4rem;
+    min-height: 4rem;
     margin-bottom: 1.75rem;
+    padding-top: 0;
 }
+.masthead > * {
+    display: block;
+    float: left;
+    margin-top: 1rem;
+}
+
 .masthead .title {
     height: 2rem;
     line-height: 2rem;
@@ -9,4 +16,13 @@
     text-transform: uppercase;
     font-weight: 300;
     letter-spacing: 0.05rem;
+}
+
+.masthead svg {
+    height: 2rem;
+    transform: scale(1.2);
+    width: auto;
+    margin-left: 0.25rem;
+    margin-right: 1rem;
+    fill: #cf0000;
 }
