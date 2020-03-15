@@ -1,0 +1,21 @@
+.panel.current-cases .case-count-container {
+    width: 100%;
+}
+
+.panel.current-cases .case-count-container .case-count {
+    text-align: center;
+    line-height: 1.15;
+    color: var(--theme-color);
+    text-shadow: 0 0 3px var(--theme-color);
+}
+.panel.current-cases .case-count-container .case-count span {
+    font-family: 'Inconsolata', 'Andale Mono', 'Courier New', Courier, monospace;
+}
+
+.panel.current-cases .last-updated {
+    float: right;
+    font-size: 0.85rem;
+    line-height: 1.35;
+    opacity: 0.6;
+    margin-top: 0.5rem;
+}

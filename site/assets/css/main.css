@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap');
 
 @import 'abstracts/variables.css';
 @import 'abstracts/global.css';
 
+@import 'components/loader.css';
 @import 'components/container.css';
 
 @import 'components/row.css';
@@ -12,3 +14,4 @@
 @import 'components/masthead.css';
 
 @import 'parts/latest-news.css';
+@import 'parts/current-cases.css';

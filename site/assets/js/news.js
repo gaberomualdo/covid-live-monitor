@@ -51,6 +51,7 @@ newsCountrySelectBoxElm.addEventListener('change', () => {
                         articleTitle = articleTitle.join('-');
 
                         newsListElm.innerHTML += `
+                        <hr>
                         <a href="${article['url']}" class="article" target="_blank">
                             <p class="top">
                                 <em>${article['source']['name']}</em>
@@ -65,7 +66,13 @@ newsCountrySelectBoxElm.addEventListener('change', () => {
 
                 // display no articles found if article length is 0
                 if (articles.length == 0) {
-                    newsListElm.innerHTML = `<em style="display: block;font-size: .85rem;text-align: center;margin-top: 1rem;">No Articles Found in Selected Country</em>`;
+                    newsListElm.innerHTML = `<em style="display: block;opacity: .7;font-size: .85rem;text-align: center;margin-top: 1rem;">No Articles Found in Selected Country</em>`;
+                }
+
+                // news has loaded, update var if needed
+                if (partsThatAreLoaded.indexOf('news') == -1) {
+                    partsThatAreLoaded.push('news');
+                    checkIfAllPartsAreLoaded();
                 }
             });
         })

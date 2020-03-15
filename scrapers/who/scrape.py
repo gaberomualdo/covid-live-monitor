@@ -31,7 +31,7 @@ if(parse_all_pdfs):
 
 			if(request.status_code == 200):
 				os.system(getCmdWithEnd(ending))
-				break;
+				break
 
 		current_pdf_reference_date = current_pdf_reference_date - datetime.timedelta(days=1)
 		current_pdf_reference_num = current_pdf_reference_num - 1

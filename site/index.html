@@ -8,7 +8,10 @@
         <link rel="stylesheet" href="assets/css/main.css" />
     </head>
     <body>
-        <div class="container">
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+        <div class="container" style="opacity: 0;">
             <nav class="row top">
                 <div class="panel masthead">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -24,7 +27,10 @@
                 <div class="col left">
                     <div class="panel current-cases">
                         <h3 class="panel-title">Current Cases:</h3>
-                        <h1 class="case-count">000,000</h1>
+                        <div class="case-count-container">
+                            <h1 class="case-count">Loading...</h1>
+                        </div>
+                        <p class="last-updated"></p>
                     </div>
                     <div class="panel links">
                         <a href="https://github.com/xtrp/Coronavirus-Risk-Calculator" class="github-repo">
@@ -121,11 +127,16 @@
             </main>
         </div>
 
+        <!-- data scripts -->
+        <script src="http://localhost:7000/current_cases_data.js"></script>
+
         <!-- scripts -->
+        <script src="assets/js/fitty.js"></script>
         <script src="assets/js/moment.js"></script>
         <script src="assets/js/api_keys.js"></script>
         <script src="assets/js/main.js"></script>
         <script src="assets/js/app.js"></script>
         <script src="assets/js/news.js"></script>
+        <script src="assets/js/current_cases.js"></script>
     </body>
 </html>

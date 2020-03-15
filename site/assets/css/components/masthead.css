@@ -24,5 +24,5 @@
     width: auto;
     margin-left: 0.25rem;
     margin-right: 1rem;
-    fill: #cf0000;
+    fill: var(--theme-color);
 }
