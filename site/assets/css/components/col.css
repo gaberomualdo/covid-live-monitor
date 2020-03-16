@@ -17,3 +17,19 @@
 .col.center {
     width: calc(100% - (var(--col-left-width) + var(--col-right-width)) - (1rem * 2));
 }
+
+/* mobile */
+@media only screen and (max-width: 1050px) {
+    .col {
+        width: 100% !important;
+        margin-right: 0 !important;
+        display: none;
+    }
+
+    /* nav functionality */
+    .container.calculator-active .col.center,
+    .container.news-active .col.right,
+    .container.cases-about-active .col.left {
+        display: block;
+    }
+}

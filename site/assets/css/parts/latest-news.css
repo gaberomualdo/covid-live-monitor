@@ -5,12 +5,19 @@
     padding-top: 0;
 }
 
+@media only screen and (max-width: 1050px) {
+    .panel.latest-news {
+        max-height: none;
+        overflow-y: hidden;
+    }
+}
+
 .panel.latest-news > .top {
     position: sticky;
     top: 0;
     background-color: var(--dark-color);
     padding-top: 1rem;
-    z-index: 99999999999;
+    z-index: 9998;
 }
 .panel.latest-news .panel-title {
     margin-bottom: 0.5rem;

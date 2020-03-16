@@ -1,0 +1,56 @@
+.panel.links {
+    padding: 0.2rem 0;
+    text-align: center;
+    font-size: 0;
+}
+.panel.links a {
+    text-align: left;
+    display: block;
+    float: left;
+    width: 100%;
+    min-height: 3.1rem;
+    box-sizing: border-box;
+    padding: 0.8rem 1rem;
+    font-size: 1.05rem;
+    line-height: 1.5rem;
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+.panel.links a:hover {
+    opacity: 1;
+}
+
+.panel.links a > * {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.panel.links a svg,
+.panel.links a img {
+    height: 1.5rem;
+    width: auto;
+    margin-left: 0.5rem;
+}
+
+.panel.links a.creator img {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--subdark-color);
+    transform: scale(1.1);
+}
+
+.panel.links hr {
+    border: none;
+    width: calc(100% - 2rem);
+    display: inline-block;
+    border-bottom: 1px solid var(--supermedium-color);
+}
+
+@media only screen and (max-width: 1050px) {
+    .panel.links {
+        display: none;
+    }
+}

@@ -42,3 +42,36 @@ window.addEventListener('load', () => {
     partsThatAreLoaded.push('window');
     checkIfAllPartsAreLoaded();
 });
+
+// mobile nav functionality
+(() => {
+    const calculatorBtn = document.querySelector('.masthead .mobile-nav button.calculator');
+    const newsBtn = document.querySelector('.masthead .mobile-nav button.news');
+    const casesAndAboutBtn = document.querySelector('.masthead .mobile-nav button.cases-about');
+
+    const container = document.querySelector('.container');
+
+    const clearCurrentTab = () => {
+        container.classList.remove('calculator-active');
+        container.classList.remove('cases-about-active');
+        container.classList.remove('news-active');
+    };
+
+    calculatorBtn.addEventListener('click', () => {
+        clearCurrentTab();
+        container.classList.add('calculator-active');
+    });
+
+    newsBtn.addEventListener('click', () => {
+        clearCurrentTab();
+        container.classList.add('news-active');
+    });
+
+    casesAndAboutBtn.addEventListener('click', () => {
+        clearCurrentTab();
+        container.classList.add('cases-about-active');
+        setTimeout(() => {
+            fitty(currentCaseCountElm);
+        }, 1000 / 60);
+    });
+})();

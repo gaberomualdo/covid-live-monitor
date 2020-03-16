@@ -18,3 +18,16 @@ body {
 ::selection {
     background-color: var(--medium-color);
 }
+
+.built-by {
+    font-size: 0.9rem;
+    text-align: right;
+    margin-bottom: 0.75rem;
+}
+.built-by a {
+    font-weight: 600;
+    text-decoration: none;
+}
+.built-by a:hover {
+    text-decoration: underline;
+}
