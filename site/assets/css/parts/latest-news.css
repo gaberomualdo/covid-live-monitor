@@ -92,6 +92,12 @@
     object-fit: cover;
     border-radius: 4px;
 }
+@media only screen and (max-width: 1050px) {
+    .panel.latest-news .news-list .article .main-picture {
+        max-height: 45vw;
+    }
+}
+
 .panel.latest-news .news-list .article .title {
     line-height: 1.35;
     font-size: 1rem;
