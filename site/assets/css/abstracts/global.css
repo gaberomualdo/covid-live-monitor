@@ -23,6 +23,7 @@ body {
     font-size: 0.9rem;
     text-align: right;
     margin-bottom: 0.75rem;
+    display: none;
 }
 .built-by a {
     font-weight: 600;
@@ -30,4 +31,9 @@ body {
 }
 .built-by a:hover {
     text-decoration: underline;
+}
+@media only screen and (max-width: 1050px) {
+    .built-by {
+        display: block;
+    }
 }

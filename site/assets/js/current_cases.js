@@ -1,5 +1,7 @@
 // elm vars
 const currentCaseCountElm = document.querySelector('.panel.current-cases .case-count');
+const deathsCountElm = document.querySelector('.panel.stats .deaths span');
+const recoveriesCountElm = document.querySelector('.panel.stats .recoveries span');
 const currentCaseCountLastUpdatedElm = document.querySelector('.panel.current-cases .last-updated');
 
 // set current case count and last updated
@@ -19,6 +21,14 @@ const currentCaseCountLastUpdatedElm = document.querySelector('.panel.current-ca
 
     // last updated
     currentCaseCountLastUpdatedElm.innerText = 'Updated ' + moment(totalCurrentCasesLastUpdated).calendar();
+
+    // deaths and recoveries
+    deathsCountElm.innerHTML = `<strong>${numberWithCommas(parseInt(totalDeaths))}</strong> (${Math.floor(
+        (parseInt(totalDeaths) / parseInt(totalCurrentCases)) * 100
+    ).toString()}%)`;
+    recoveriesCountElm.innerHTML = `<strong>${numberWithCommas(parseInt(totalRecoveries))}</strong> (${Math.floor(
+        (parseInt(totalRecoveries) / parseInt(totalCurrentCases)) * 100
+    ).toString()}%)`;
 })();
 
 window.addEventListener('load', () => {

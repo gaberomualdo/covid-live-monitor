@@ -19,3 +19,21 @@
     opacity: 0.6;
     margin-top: 0.5rem;
 }
+
+.panel.stats p {
+    line-height: 1.25;
+    font-size: 0.9rem;
+}
+.panel.stats p:not(:last-child) {
+    margin-bottom: 0.625rem;
+}
+.panel.stats p > * {
+    display: inline-block;
+}
+.panel.stats p > strong {
+    opacity: 0.7;
+    font-weight: 500;
+}
+.panel.stats p > span {
+    margin-left: 0.5rem;
+}

@@ -3,7 +3,9 @@
 }
 
 .panel.about p {
-    font-size: 0.95rem;
+    font-size: 0.8rem;
+    line-height: 1.75;
+    opacity: 0.95;
 }
 .panel.about p:not(:last-child) {
     margin-bottom: 1rem;
@@ -16,10 +18,5 @@
     transition: transform 0.2s;
 }
 .panel.about a:hover {
-    transform: translateY(-0.5px);
     text-decoration: underline;
-    opacity: 1;
-}
-.panel.about a:active {
-    transform: translateY(0);
 }

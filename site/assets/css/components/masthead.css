@@ -24,7 +24,6 @@
     display: none;
     width: 100%;
     overflow: hidden;
-    height: 1.5rem;
 }
 
 .masthead > svg {
@@ -37,12 +36,13 @@
 }
 
 /* mobile */
+.masthead .mobile-title {
+    text-align: center;
+}
 .masthead .mobile-title .text {
-    display: block;
-    float: left;
-    height: 1.5rem;
-    line-height: 1.5rem;
-    font-size: 1rem;
+    vertical-align: top;
+    display: inline-block;
+    line-height: 1.5;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 0.05rem;

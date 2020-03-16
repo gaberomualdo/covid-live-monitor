@@ -1,2 +1,4 @@
-const totalCurrentCases = '173167';
-const totalCurrentCasesLastUpdated = '2020-03-16T12:26:52+00:00';
+const totalCurrentCases = '175724';
+const totalDeaths = '6716';
+const totalRecoveries = '77868';
+const totalCurrentCasesLastUpdated = '2020-03-16T16:13:52+00:00';

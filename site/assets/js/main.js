@@ -10,6 +10,26 @@ const fireDOMEvent = (el, etype) => {
     }
 };
 
+// remove URL hash function
+// code taken from user Andy E on https://stackoverflow.com/questions/1397329/how-to-remove-the-hash-from-window-location-url-with-javascript-without-page-r/5298684#5298684
+const removeHashFromURL = () => {
+    var scrollV,
+        scrollH,
+        loc = window.location;
+    if ('pushState' in history) history.pushState('', document.title, loc.pathname + loc.search);
+    else {
+        // Prevent scrolling by storing the page's current scroll offset
+        scrollV = document.body.scrollTop;
+        scrollH = document.body.scrollLeft;
+
+        loc.hash = '';
+
+        // Restore the scroll offset, should be flicker free
+        document.body.scrollTop = scrollV;
+        document.body.scrollLeft = scrollH;
+    }
+};
+
 // add comma separators to numbers function
 // code taken from user Elias Zamaria on https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
 const numberWithCommas = x => {
@@ -60,18 +80,29 @@ window.addEventListener('load', () => {
     calculatorBtn.addEventListener('click', () => {
         clearCurrentTab();
         container.classList.add('calculator-active');
+        removeHashFromURL();
     });
 
     newsBtn.addEventListener('click', () => {
         clearCurrentTab();
         container.classList.add('news-active');
+        window.location.hash = 'news';
     });
 
     casesAndAboutBtn.addEventListener('click', () => {
         clearCurrentTab();
         container.classList.add('cases-about-active');
+        window.location.hash = 'cases';
+
         setTimeout(() => {
             fitty(currentCaseCountElm);
         }, 1000 / 60);
     });
+
+    console.log(window.location.hash);
+    if (window.location.hash == '#news') {
+        fireDOMEvent(newsBtn, 'click');
+    } else if (window.location.hash == '#cases') {
+        fireDOMEvent(casesAndAboutBtn, 'click');
+    }
 })();
