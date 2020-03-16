@@ -99,7 +99,6 @@ window.addEventListener('load', () => {
         }, 1000 / 60);
     });
 
-    console.log(window.location.hash);
     if (window.location.hash == '#news') {
         fireDOMEvent(newsBtn, 'click');
     } else if (window.location.hash == '#cases') {

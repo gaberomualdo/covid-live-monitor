@@ -1,4 +1,98 @@
+/* tabselect functionality */
+.panel.main-app {
+    padding-top: 0.5rem;
+}
 .panel.main-app .tab-select {
-    height: 2rem;
+    min-height: 2rem;
     list-style: none;
+    margin-bottom: 1.15rem;
+}
+.panel.main-app .tab-select li {
+    height: 2rem;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-right: 0.75rem;
+    border-bottom: 2px solid var(--subdark-color);
+    line-height: calc(2rem - 2px);
+    padding: 0 0.25rem;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s, border-color 0.2s;
+    user-select: none;
+    margin-top: 0.5rem;
+}
+.panel.main-app .tab-select li:hover {
+    opacity: 1;
+    border-color: var(--supermedium-color);
+}
+
+.panel.main-app.calculator-active .tab-select li.calculator,
+.panel.main-app.symptoms-active .tab-select li.symptoms,
+.panel.main-app.prevention-active .tab-select li.prevention {
+    border-color: var(--white-color);
+    opacity: 1;
+    font-weight: 600;
+}
+
+.panel.main-app .tabs > section {
+    display: none;
+}
+
+.panel.main-app.calculator-active .tabs > section.calculator,
+.panel.main-app.symptoms-active .tabs > section.symptoms,
+.panel.main-app.prevention-active .tabs > section.prevention {
+    display: block;
+}
+
+@media only screen and (max-width: 550px) {
+    .panel.main-app .tab-select li {
+        margin-right: 0.25rem;
+    }
+    .panel.main-app .tab-select li span {
+        display: none;
+    }
+}
+
+.panel.main-app .tabs > section .panel-title {
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+}
+
+.panel.main-app .tabs > section .sources {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    overflow: hidden;
+    padding-top: 1rem;
+    border-top: 1px solid var(--supermedium-color);
+}
+
+.panel.main-app .tabs > section * {
+    line-height: 1.5;
+}
+
+.panel.main-app .tabs > section > *:not(:last-child),
+.panel.main-app .tabs > section > .sources > *:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.panel.main-app .tabs > section a {
+    text-decoration: none;
+    font-weight: 600;
+}
+.panel.main-app .tabs > section a:hover {
+    text-decoration: underline;
+}
+
+.panel.main-app .tabs > section > ul {
+    margin-left: 3rem;
+}
+.panel.main-app .tabs > section > ul > li {
+    color: var(--somewhat-submedium-color);
+}
+.panel.main-app .tabs > section > ul > li strong {
+    color: var(--white-color);
+}
+
+.panel.main-app .tabs > section > ul > li:not(:last-child) {
+    margin-bottom: 0.25rem;
 }

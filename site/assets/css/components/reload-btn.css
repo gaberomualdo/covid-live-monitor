@@ -21,7 +21,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .container > .reload-btn {
+    .container.cases-about-active > .reload-btn {
         display: block;
     }
 }
