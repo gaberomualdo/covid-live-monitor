@@ -55,7 +55,7 @@
 
 .panel.main-app .tabs > section .panel-title {
     line-height: 1.5;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.75rem !important;
 }
 
 .panel.main-app .tabs > section .sources {
