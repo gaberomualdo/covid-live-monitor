@@ -1,0 +1,27 @@
+.container > .reload-btn {
+    border: none;
+    position: fixed;
+    z-index: 99999;
+    bottom: 1rem;
+    right: 1rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    background-color: var(--dark-color);
+    box-shadow: 0 0.15rem 1rem var(--shadow-color);
+    box-sizing: border-box;
+    padding: calc(0.75rem - 1px);
+    border: 1px solid var(--white-color);
+    display: none;
+}
+.container > .reload-btn svg {
+    fill: var(--white-color);
+    width: 2rem;
+    height: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .container > .reload-btn {
+        display: block;
+    }
+}

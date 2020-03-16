@@ -13,6 +13,8 @@
 
 @import 'components/masthead.css';
 
+@import 'components/reload-btn.css';
+
 @import 'parts/latest-news.css';
 @import 'parts/current-cases.css';
 @import 'parts/links.css';
