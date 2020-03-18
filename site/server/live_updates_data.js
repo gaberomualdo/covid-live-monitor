@@ -1,0 +1,1 @@
+const liveVideoURL = 'https://www.youtube.com/embed/2RMl8yqo6Uk';

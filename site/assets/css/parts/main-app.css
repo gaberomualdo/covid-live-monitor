@@ -1,3 +1,18 @@
+/* main app panel */
+.panel.main-app {
+    max-height: calc(100vh - 8.25rem);
+    overflow-y: scroll;
+    position: relative;
+    padding-top: 0;
+}
+
+@media only screen and (max-width: 1050px) {
+    .panel.main-app {
+        max-height: none;
+        overflow-y: hidden;
+    }
+}
+
 /* tabselect functionality */
 .panel.main-app {
     padding-top: 0.5rem;
@@ -5,7 +20,7 @@
 .panel.main-app .tab-select {
     min-height: 2rem;
     list-style: none;
-    margin-bottom: 1.15rem;
+    margin-bottom: 1.4rem;
 }
 .panel.main-app .tab-select li {
     height: 2rem;
@@ -26,9 +41,9 @@
     border-color: var(--supermedium-color);
 }
 
-.panel.main-app.calculator-active .tab-select li.calculator,
-.panel.main-app.symptoms-active .tab-select li.symptoms,
-.panel.main-app.prevention-active .tab-select li.prevention {
+.panel.main-app.overview-active .tab-select li.overview,
+.panel.main-app.stock-active .tab-select li.stock,
+.panel.main-app.health-active .tab-select li.health {
     border-color: var(--white-color);
     opacity: 1;
     font-weight: 600;
@@ -38,9 +53,9 @@
     display: none;
 }
 
-.panel.main-app.calculator-active .tabs > section.calculator,
-.panel.main-app.symptoms-active .tabs > section.symptoms,
-.panel.main-app.prevention-active .tabs > section.prevention {
+.panel.main-app.overview-active .tabs > section.overview,
+.panel.main-app.stock-active .tabs > section.stock,
+.panel.main-app.health-active .tabs > section.health {
     display: block;
 }
 
@@ -55,7 +70,8 @@
 
 .panel.main-app .tabs > section .panel-title {
     line-height: 1.5;
-    margin-bottom: 0.75rem !important;
+    /*    border-bottom: 1px solid var(--regular-color);*/
+    margin-bottom: 0.95rem !important;
 }
 
 .panel.main-app .tabs > section .sources {
@@ -102,4 +118,10 @@
 
 .panel.main-app .tabs > section > ul > li:not(:last-child) {
     margin-bottom: 0.25rem;
+}
+
+/* stock widget */
+.panel.main-app.stock-active .tabs > section.stock .stock-widget {
+    width: 100%;
+    height: 42.5rem;
 }

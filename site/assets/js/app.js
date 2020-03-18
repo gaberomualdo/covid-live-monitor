@@ -1,30 +1,30 @@
 // app nav functionality
 (() => {
-    const calculatorBtn = document.querySelector('.panel.main-app .tab-select li.calculator');
-    const symptomsBtn = document.querySelector('.panel.main-app .tab-select li.symptoms');
-    const preventionBtn = document.querySelector('.panel.main-app .tab-select li.prevention');
+    const overviewBtn = document.querySelector('.panel.main-app .tab-select li.overview');
+    const stockBtn = document.querySelector('.panel.main-app .tab-select li.stock');
+    const healthBtn = document.querySelector('.panel.main-app .tab-select li.health');
 
     const mainAppContainer = document.querySelector('.panel.main-app');
 
     const clearCurrentTab = () => {
-        mainAppContainer.classList.remove('calculator-active');
-        mainAppContainer.classList.remove('symptoms-active');
-        mainAppContainer.classList.remove('prevention-active');
+        mainAppContainer.classList.remove('overview-active');
+        mainAppContainer.classList.remove('stock-active');
+        mainAppContainer.classList.remove('health-active');
     };
 
-    calculatorBtn.addEventListener('click', () => {
+    overviewBtn.addEventListener('click', () => {
         clearCurrentTab();
-        mainAppContainer.classList.add('calculator-active');
+        mainAppContainer.classList.add('overview-active');
         removeHashFromURL();
     });
 
-    symptomsBtn.addEventListener('click', () => {
+    stockBtn.addEventListener('click', () => {
         clearCurrentTab();
-        mainAppContainer.classList.add('symptoms-active');
+        mainAppContainer.classList.add('stock-active');
     });
 
-    preventionBtn.addEventListener('click', () => {
+    healthBtn.addEventListener('click', () => {
         clearCurrentTab();
-        mainAppContainer.classList.add('prevention-active');
+        mainAppContainer.classList.add('health-active');
     });
 })();
