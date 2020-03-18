@@ -1,3 +1,9 @@
+// get rem in px function
+// code taken from user etham on https://stackoverflow.com/questions/36532307/rem-px-in-javascript
+const convertRemToPixels = rem => {
+    return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+};
+
 // fire event function
 // code taken from user Kooilnc on https://stackoverflow.com/questions/2705583/how-to-simulate-a-click-with-javascript
 const fireDOMEvent = (el, etype) => {

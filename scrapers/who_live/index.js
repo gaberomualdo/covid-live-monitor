@@ -35,8 +35,7 @@ async function getData(url) {
 
 // create server
 app.get('/', (req, res) => {
-    const pageURL =
-        'https://www.cdc.gov/TemplatePackage/contrib/widgets/cdcMaps/build/index.html?chost=www.cdc.gov&cpath=/coronavirus/2019-ncov/cases-in-us.html&csearch=&chash=&ctitle=Coronavirus%20Disease%202019%20(COVID-19)%20in%20the%20U.S.%20%7C%20CDC&wn=cdcMaps&wf=/TemplatePackage/contrib/widgets/cdcMaps/build/&wid=cdcMaps1&mMode=widget&mPage=&mChannel=&class=mb-3&host=www.cdc.gov&theme=theme-cyan&configUrl=/coronavirus/2019-ncov/map-cases-us.json';
+    const pageURL = 'https://www.who.int/emergencies/diseases/novel-coronavirus-2019';
 
     getData(pageURL)
         .then(src => {

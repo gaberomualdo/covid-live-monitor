@@ -42,7 +42,7 @@
 }
 
 .panel.main-app.overview-active .tab-select li.overview,
-.panel.main-app.stock-active .tab-select li.stock,
+/*.panel.main-app.stock-active .tab-select li.stock,*/
 .panel.main-app.health-active .tab-select li.health {
     border-color: var(--white-color);
     opacity: 1;
@@ -54,7 +54,7 @@
 }
 
 .panel.main-app.overview-active .tabs > section.overview,
-.panel.main-app.stock-active .tabs > section.stock,
+/*.panel.main-app.stock-active .tabs > section.stock,*/
 .panel.main-app.health-active .tabs > section.health {
     display: block;
 }
@@ -120,8 +120,86 @@
     margin-bottom: 0.25rem;
 }
 
-/* stock widget */
-.panel.main-app.stock-active .tabs > section.stock .stock-widget {
+/* styled links */
+.panel.main-app .tabs > section .styled-link {
+    display: block;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--regular-color);
+    border-radius: 4px;
+    min-height: 3rem;
+    opacity: 0.7;
+    transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s !important;
+    backface-visibility: hidden;
+    text-decoration: none !important;
+}
+.panel.main-app .tabs > section .styled-link:not(:last-child) {
+    margin-bottom: 1.15rem;
+}
+.panel.main-app .tabs > section .styled-link:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+    box-shadow: 0 0.25rem 1rem var(--shadow-color);
+}
+.panel.main-app .tabs > section .styled-link:active {
+    box-shadow: 0 0.125rem 0.5rem var(--shadow-color);
+    transform: translateY(0);
+}
+
+.panel.main-app .tabs > section .styled-link > * {
+    display: inline-block;
+    min-height: 2rem;
+    line-height: 2rem;
+    vertical-align: top;
+}
+.panel.main-app .tabs > section .styled-link > span {
+    margin-right: 0.5rem;
+}
+.panel.main-app .tabs > section .styled-link > svg {
+    height: 2rem;
+    width: auto;
+    transform: scale(0.85) translateY(-0.075rem);
+    fill: var(--white-color);
+}
+
+/* live updates section styled links */
+@media only screen and (min-width: 830px) {
+    .panel.main-app .tabs > section.overview .styled-link {
+        width: calc(50% - (1.25rem / 2));
+        margin-bottom: 0;
+    }
+    .panel.main-app .tabs > section.overview .styled-link:not(:last-child) {
+        margin-right: 1.25rem;
+    }
+}
+
+/* live updates section video container */
+.panel.main-app .tabs > section.overview .video-container {
+    height: 27.5rem;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+/* stock section
+
+/* stock widget
+.panel.main-app .tabs > section.stock .stock-widget {
     width: 100%;
     height: 42.5rem;
 }
+
+.panel.main-app .tabs > section.stock .panel-title {
+    margin-bottom: 0.5rem !important;
+}
+.panel.main-app .tabs > section.stock p {
+    opacity: 0.7;
+}
+
+/* don't show numbers in stock widget
+.tv-widget-watch-list__quote-column:last-child {
+    opacity: 0;
+}
+*/

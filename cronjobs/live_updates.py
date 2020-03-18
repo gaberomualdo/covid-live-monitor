@@ -16,6 +16,8 @@ def update_current_cases():
 
 schedule.every(10).minutes.do(update_current_cases)
 
+update_current_cases()
+
 while True:
     schedule.run_pending()
     sleep(30)

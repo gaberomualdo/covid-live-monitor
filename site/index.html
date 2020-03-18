@@ -88,6 +88,7 @@
                     </div>
                     <div class="panel about">
                         <p>Total cases, deaths, and recoveries data from <a href="https://www.worldometers.info/coronavirus/" target="_blank">WorldoMeters</a>, which gets data from sources such as <a href="http://who.int/" target="_blank">The WHO</a>.</p>
+                        <p>Rates (percentages) are calculated by dividing the current amount of recoveries/deaths by the current amount of total cases.</p>
                     </div>
                     <div class="panel links">
                         <a href="https://github.com/xtrp/Coronavirus-Risk-Calculator" target="_blank" class="github-repo">
@@ -108,20 +109,32 @@
 
                 <!-- main app panel with travel info entering area and risk calculator -->
                 <div class="col center">
-                    <div class="panel main-app health-active">
+                    <div class="panel main-app overview-active">
                         <ul class="tab-select">
-                            <li class="overview">Overview <span>&amp; History</span></li>
-                            <li class="stock">Effect on Stock Market</li>
+                            <li class="overview">Live Updates</span></li>
+                            <!--<li class="stock">Stock Market</li>-->
                             <li class="health">Health Resources</span></li>
                         </ul>
                         <div class="tabs">
                             <section class="overview">
-                                <h3 class="panel-title">Overview &amp; History</h3>
+                                <h3 class="panel-title">Latest Updates from The WHO</h3>
+                                <div class="video-container">
+
+                                </div>
+                                <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports" target="_blank" class="styled-link">
+                                    <span class="text">Read Latest WHO Situation Reports</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z"/></svg>
+                                </a>
+                                <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/media-resources/news" target="_blank" class="styled-link">
+                                    <span class="text">Read Latest WHO News Updates</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z"/></svg>
+                                </a>
                             </section>
-                            <section class="stock">
+                            <!--<section class="stock">
                                 <h3 class="panel-title">Effect on Stock Market</h3>
+                                <p>Market data may be delayed by > 24 hours.</p>
                                 <div class="stock-widget">
-                                <!-- TradingView Widget BEGIN -->
+                                <!-- TradingView Widget BEGIN
                                 <div class="tradingview-widget-container">
                                 <div class="tradingview-widget-container__widget"></div>
                                 <div class="tradingview-widget-copyright"><a href="https://uk.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Market Data</span></a> by TradingView</div>
@@ -130,7 +143,7 @@
                                 "colorTheme": "dark",
                                 "dateRange": "12m",
                                 "showChart": true,
-                                "locale": "uk",
+                                "locale": "en",
                                 "width": "100%",
                                 "height": "100%",
                                 "largeChartUrl": "",
@@ -261,35 +274,23 @@
                                 }
                                 </script>
                                 </div>
-                                <!-- TradingView Widget END -->
+                                <!-- TradingView Widget END
                                 </div>
-                            </section>
+                            </section>-->
                             <section class="health">
-                                <h3 class="panel-title">Prevention Tips and Advice</h3>
-                                <ul>
-                                    <li><strong>Clean hands frequently</strong>, either with an alcohol-based hand sanitizer, or with soap and water.</li>
-                                    <li>When washing hands with soap and water, scrub your hands for at least 20 seconds as recommended by The CDC, which is typically the amount of time it takes to sing “Happy Birthday” twice.</li>
-                                    <li>To turn off the tap, use a disposable towel or other disposable object, and make sure not to touch the tap.</li>
-                                    <br>
-                                    <li>When coughing and sneezing, <strong>cover your mouth</strong> with your elbow to prevent spread.</li>
-                                    <br>
-                                    <li><strong>Avoid close contact</strong> with others, especially with those coughing or sneezing</li>
-                                    <li>At least 1 meter (3 feet) distance away from others is recommended by The WHO.</li>
-                                    <br>
-                                    <li><strong>Avoid touching your face</strong>, particularly your nose, eyes, and mouth before washing hands thoroughly.</li>
-                                    <br>
-                                    <li>If you decide to wear a mask, do not touch the front of the mask, and make sure to discard it by holding it by the elastics on the side.</li>
-                                    <li>Do not use disposable masks twice, and wash your hands before putting on a mask.</li>
-                                    <li>Masks should cover your nose, mouth, and chin.</li>
-                                    <li><strong>Masks are only effective when used properly</strong> as detailed above, otherwise they could help spread the virus.</li>
-                                </ul>
-                                <div class="sources">
-                                    <p><strong>Sources:</strong></p>
-                                    <p>“Coronavirus (COVID-19) Advice for Public.” <em>World Health Organization</em>, World Health Organization, <a href="http://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/">www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public</a>.</p>
-                                    <p>“Coronavirus (COVID-19) Advice for Public: When and How to Use Masks.” <em>World Health Organization</em>, World Health Organization, <a href="http://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/when-and-how-to-use-masks/">www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/when-and-how-to-use-masks</a>.</p>
-                                    <p>“How to Wash Your Hands.” <em>NHS</em>, NHS, <a href="http://www.nhs.uk/live-well/healthy-body/best-way-to-wash-your-hands/">www.nhs.uk/live-well/healthy-body/best-way-to-wash-your-hands/</a>.</p>
-                                    <p>“When and How to Wash Your Hands.” <em>Centers for Disease Control and Prevention</em>, Centers for Disease Control and Prevention, 3 Oct. 2019, <a href="http://www.cdc.gov/handwashing/when-how-handwashing.html/">www.cdc.gov/handwashing/when-how-handwashing.html</a>.</p>
-                                </div>
+                                <h3 class="panel-title">Health Resources</h3>
+                                <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public" target="_blank" class="styled-link">
+                                    <span class="text">Advice from The World Health Organization</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z"/></svg>
+                                </a>
+                                <a href="https://www.cdc.gov/coronavirus/2019-ncov/prepare/prevention.html" target="_blank" class="styled-link">
+                                    <span class="text">Advice from The Center for Disease Control and Prevention (U.S.A.)</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z"/></svg>
+                                </a>
+                                <a href="https://www.nhs.uk/conditions/coronavirus-covid-19/" target="_blank" class="styled-link">
+                                    <span class="text">Information from The National Health Service (U.K.)</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z"/></svg>
+                                </a>
                             </section>
                         </div>
                     </div>
@@ -370,8 +371,22 @@
             <div class="clearfix" style="display: block; clear: both;">
         </div>
 
+        <!-- register service worker -->
+        <script>
+        if ('serviceWorker' in navigator) {
+            console.log('Attempting to register Service Worker (service-worker.js in root directory)');
+            navigator.serviceWorker.register('service-worker.js')
+                .then((reg) => {
+                    console.log('Service worker successfully registered.');
+                }).catch(function(err) {
+                    console.log('Service worker did not register. The following error was yielded: ', err);
+                });
+        }
+        </script>
+
         <!-- data scripts -->
         <script src="http://localhost:7000/current_cases_data.js"></script>
+        <script src="http://localhost:7000/live_updates_data.js"></script>
 
         <!-- scripts -->
         <script src="assets/js/fitty.js"></script>

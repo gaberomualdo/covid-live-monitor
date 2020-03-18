@@ -1,5 +1,9 @@
 {
-    "name": "App",
+    "short_name": "Coronavirus Monitor",
+    "name": "Coronavirus Live Monitor",
+    "theme_color": "#DA1333",
+    "background_color": "#263238",
+    "display": "standalone",
     "icons": [
         {
             "src": "assets/favicon/android-icon-36x36.png",
