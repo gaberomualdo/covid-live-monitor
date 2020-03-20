@@ -1,6 +1,6 @@
 <a align="center" href="https://covid19.xtrp.io/">
-    <img src="site/full_logo.png" height="50" alt="Coronavirus (COVID-19) Web App">
-</p>
+    <img src="site/full_logo.png" height="80" alt="Coronavirus (COVID-19) Web App">
+</a>
 <p align="center">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/xtrp/Coronavirus-Live-Monitor">
     <img alt="GitHub stars" src="https://img.shields.io/github/stars/xtrp/Coronavirus-Live-Monitor?style=social">
