@@ -1,22 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap');
 
-@import 'abstracts/variables.css';
-@import 'abstracts/global.css';
+@import 'abstracts/variables.css?v=1';
+@import 'abstracts/global.css?v=1';
 
-@import 'components/loader.css';
-@import 'components/container.css';
+@import 'components/loader.css?v=1';
+@import 'components/container.css?v=1';
 
-@import 'components/row.css';
-@import 'components/col.css';
-@import 'components/panel.css';
+@import 'components/row.css?v=1';
+@import 'components/col.css?v=1';
+@import 'components/panel.css?v=1';
 
-@import 'components/masthead.css';
+@import 'components/masthead.css?v=1';
 
-@import 'components/reload-btn.css';
+@import 'components/reload-btn.css?v=1';
 
-@import 'parts/latest-news.css';
-@import 'parts/current-cases.css';
-@import 'parts/links.css';
-@import 'parts/about.css';
-@import 'parts/main-app.css';
+@import 'parts/latest-news.css?v=1';
+@import 'parts/current-cases.css?v=1';
+@import 'parts/links.css?v=1';
+@import 'parts/about.css?v=1';
+@import 'parts/main-app.css?v=1';
