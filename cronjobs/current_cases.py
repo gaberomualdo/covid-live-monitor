@@ -10,7 +10,7 @@ from time import gmtime, strftime, sleep
 
 # function to be run every minute
 def update_current_cases():
-    request = requests.get("http://localhost:7000/get_total_cases.php")
+    request = requests.get("https://covid19.xtrp.io/server/get_total_cases.php")
     if(request.status_code == 200):
         print(request.text)
     else:
