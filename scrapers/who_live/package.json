@@ -1,7 +1,7 @@
 {
     "name": "who_live",
     "version": "1.0.0",
-    "description": "",
+    "description": "Express server to scrape the WHO coronavirus page and return (as JSON) the URL of a video of the latest virus press release.",
     "main": "index.js",
     "scripts": {
         "start": "nodemon index",

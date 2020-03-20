@@ -24,13 +24,36 @@
         <meta name="msapplication-TileColor" content="#263238">
         <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
         <meta name="theme-color" content="#263238">
+
+        <!-- SEO -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Coronavirus (COVID-19) Live Monitor" />
+        <meta property="og:site_name" content="Coronavirus (COVID-19) Live Monitor" />
+        <meta property="og:description" content="Your new hub for news, information, and latest updates about the Coronavirus (COVID-19) outbreak." />
+        <meta property="og:image" content="full_logo.png" />
+
+        <meta name="twitter:site" content="Coronavirus (COVID-19) Live Monitor" />
+        <meta name="twitter:title" content="Coronavirus (COVID-19) Live Monitor" />
+        <meta name="twitter:description" content="Your new hub for news, information, and latest updates about the Coronavirus (COVID-19) outbreak." />
+        <meta name="twitter:image" content="full_logo.png" />
+        <meta name="twitter:card" content="summary" />
+
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120907429-8"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-120907429-8');
+        </script>
     </head>
     <body>
         <div class="loader">
             <div class="loader-inner"></div>
         </div>
         <div class="container calculator-active" style="opacity: 0;">
-            <p class="built-by"><a href="https://github.com/xtrp/Coronavirus-Risk-Calculator">Star on GitHub</a> &nbsp;&bull;&nbsp; Built by <a href="https://xtrp.io/">Fred Adams</a></p>
+            <p class="built-by"><a href="https://github.com/xtrp/Coronavirus-Live-Monitor">Star on GitHub</a> &nbsp;&bull;&nbsp; Built by <a href="https://xtrp.io/">Fred Adams</a></p>
             <nav class="row top">
                 <div class="panel masthead">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -91,7 +114,7 @@
                         <p>Rates (percentages) are calculated by dividing the current amount of recoveries/deaths by the current amount of total cases.</p>
                     </div>
                     <div class="panel links">
-                        <a href="https://github.com/xtrp/Coronavirus-Risk-Calculator" target="_blank" class="github-repo">
+                        <a href="https://github.com/xtrp/Coronavirus-Live-Monitor" target="_blank" class="github-repo">
                             <span class="text">Star on GitHub</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <path
@@ -385,8 +408,8 @@
         </script>
 
         <!-- data scripts -->
-        <script src="http://localhost:7000/current_cases_data.js"></script>
-        <script src="http://localhost:7000/live_updates_data.js"></script>
+        <script src="server/current_cases_data.js?v=<?php echo uniqid(); ?>"></script>
+        <script src="server/live_updates_data.js?v=<?php echo uniqid(); ?>"></script>
 
         <!-- scripts -->
         <script src="assets/js/fitty.js"></script>
