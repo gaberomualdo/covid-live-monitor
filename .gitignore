@@ -1,7 +1,6 @@
 node_modules
 scrapers/cdc/node_modules
 scrapers/who_live/node_modules
-site/assets/js/api_keys.js
 removed.txt
 .DS_Store
 */.DS_Store

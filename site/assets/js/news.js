@@ -4,7 +4,7 @@ const newsListElm = document.querySelector('.panel.latest-news .news-list');
 
 // get ip address to infer location if possible
 (() => {
-    fetch('http://ip-api.com/json')
+    fetch('https://ip-api.com/json')
         .then(response => {
             response.text().then(text => {
                 // infer country code from list of possible country codes
