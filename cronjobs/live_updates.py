@@ -18,7 +18,7 @@ def update_current_cases():
     request = requests.get("http://localhost:7001/")
     if(request.status_code == 200):
         # send response (as GET variable) of that request to the PHP server
-        finalRequest = requests.get("http://localhost:7000/get_live_updates.php?src=" + request.text)
+        finalRequest = requests.get("https://covid19.xtrp.io/server/get_live_updates.php?src=" + request.text)
         if(finalRequest.status_code == 200):
             print("Success " + request.text)
         else:
