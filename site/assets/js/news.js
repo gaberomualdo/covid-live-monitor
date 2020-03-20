@@ -13,7 +13,7 @@ const newsListElm = document.querySelector('.panel.latest-news .news-list');
                     ' '
                 );
                 const responseCountryCode = responseObj['country_code'].toLowerCase();
-                if (responseObj['status'] == 'success' && possibleCountryCodes.indexOf(responseCountryCode) > -1) {
+                if (possibleCountryCodes.indexOf(responseCountryCode) > -1) {
                     newsCountrySelectBoxElm.value = responseCountryCode;
                 } else {
                     // if no match found, use USA as default country
