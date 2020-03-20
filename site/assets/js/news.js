@@ -34,7 +34,7 @@ const newsListElm = document.querySelector('.panel.latest-news .news-list');
 // load news articles when country select is updated
 newsCountrySelectBoxElm.addEventListener('change', () => {
     const countryCode = newsCountrySelectBoxElm.value;
-    fetch(`http://newsapi.org/v2/top-headlines?country=${countryCode}&q=corona%20virus&apiKey=${newsAPIKey}`)
+    fetch(`https://newsapi.org/v2/top-headlines?country=${countryCode}&q=corona%20virus&apiKey=${newsAPIKey}`)
         .then(response => {
             response.text().then(text => {
                 const responseObj = JSON.parse(text);
