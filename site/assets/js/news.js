@@ -4,7 +4,7 @@ const newsListElm = document.querySelector('.panel.latest-news .news-list');
 
 // get ip address to infer location if possible
 (() => {
-    fetch('https://ip-api.com/json')
+    fetch('https://ipapi.co/8.8.8.8/json/')
         .then(response => {
             response.text().then(text => {
                 // infer country code from list of possible country codes
@@ -12,7 +12,7 @@ const newsListElm = document.querySelector('.panel.latest-news .news-list');
                 const possibleCountryCodes = 'ae ar at au be bg br ca ch cn co cu cz de eg fr gb gr hk hu id ie il in it jp kr lt lv ma mx my ng nl no nz ph pl pt ro rs ru sa se sg si sk th tr tw ua us ve za'.split(
                     ' '
                 );
-                const responseCountryCode = responseObj['countryCode'].toLowerCase();
+                const responseCountryCode = responseObj['country_code'].toLowerCase();
                 if (responseObj['status'] == 'success' && possibleCountryCodes.indexOf(responseCountryCode) > -1) {
                     newsCountrySelectBoxElm.value = responseCountryCode;
                 } else {
