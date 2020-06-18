@@ -10,17 +10,20 @@ from time import gmtime, strftime, sleep
 
 # function to be run every minute
 def update_current_cases():
-    request = requests.get("https://covid19.xtrp.io/server/get_total_cases.php")
-    if(request.status_code == 200):
-        print(request.text)
-    else:
-        print("ERROR: " + str(request.status_code))
+    try:
+        request = requests.get("https://covid19.xtrp.io/server/get_total_cases.php")
+        if(request.status_code == 200):
+            print(request.text)
+        else:
+            print("ERROR: " + str(request.status_code))
+    except:
+        print("ERROR")
 
 # run function initially
 update_current_cases()
 
 # start and run cronjob
-schedule.every(1).minutes.do(update_current_cases)
+schedule.every(5).minutes.do(update_current_cases)
 
 while True:
     schedule.run_pending()
