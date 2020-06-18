@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Coronavirus (COVID-19) Live Monitor</title>
 
-        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/main.css?v=1" />
         
         <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
@@ -30,12 +30,12 @@
         <meta property="og:title" content="Coronavirus (COVID-19) Live Monitor" />
         <meta property="og:site_name" content="Coronavirus (COVID-19) Live Monitor" />
         <meta property="og:description" content="Your new hub for news, information, and latest updates about the Coronavirus (COVID-19) outbreak." />
-        <meta property="og:image" content="full_logo.png" />
+        <meta property="og:image" content="assets/favicon/apple-icon-180x180.png" />
 
         <meta name="twitter:site" content="Coronavirus (COVID-19) Live Monitor" />
         <meta name="twitter:title" content="Coronavirus (COVID-19) Live Monitor" />
         <meta name="twitter:description" content="Your new hub for news, information, and latest updates about the Coronavirus (COVID-19) outbreak." />
-        <meta name="twitter:image" content="full_logo.png" />
+        <meta name="twitter:image" content="assets/favicon/apple-icon-180x180.png" />
         <meta name="twitter:card" content="summary" />
 
         <!-- Google Analytics -->
@@ -52,7 +52,7 @@
         <div class="loader">
             <div class="loader-inner"></div>
         </div>
-        <div class="container calculator-active" style="opacity: 0;">
+        <div class="container cases-about-active" style="opacity: 0;">
             <p class="built-by"><a href="https://github.com/xtrp/Coronavirus-Live-Monitor">Star on GitHub</a> &nbsp;&bull;&nbsp; Built by <a href="https://xtrp.io/">Fred Adams</a></p>
             <nav class="row top">
                 <div class="panel masthead">

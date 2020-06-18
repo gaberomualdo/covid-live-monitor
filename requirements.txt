@@ -1,4 +1,0 @@
-The following are required by to run the code in this repo:
-
-PyPDF2 --> pip3 install PyPDF2
-

@@ -36,4 +36,4 @@ Your new hub for news, information, and latest updates about the Coronavirus (CO
 
 Coronavirus Live Monitor was built solely by web developer and student [Fred Adams](https://xtrp.io/).
 
-The code is copyrighted and not open-source licensed.
+The code is completely OSS and is MIT Licensed. See LICENSE.txt for details.

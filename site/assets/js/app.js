@@ -25,9 +25,13 @@
 // live video updates from the WHO
 (() => {
     const overviewPanelVideoContainerElm = document.querySelector('.panel.main-app .tabs > section.overview > .video-container');
+    let height = 27.5;
+    if (window.innerWidth <= 600) {
+        height = 15;
+    }
     overviewPanelVideoContainerElm.innerHTML += `
     <iframe width="100%" height="${convertRemToPixels(
-        27.5
+        height
     )}" src="${liveVideoURL}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     `;
 })();

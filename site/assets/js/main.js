@@ -86,7 +86,7 @@ window.addEventListener('load', () => {
     calculatorBtn.addEventListener('click', () => {
         clearCurrentTab();
         container.classList.add('calculator-active');
-        removeHashFromURL();
+        window.location.hash = 'calculator';
     });
 
     newsBtn.addEventListener('click', () => {
@@ -98,16 +98,16 @@ window.addEventListener('load', () => {
     casesAndAboutBtn.addEventListener('click', () => {
         clearCurrentTab();
         container.classList.add('cases-about-active');
-        window.location.hash = 'cases';
+        removeHashFromURL();
 
         setTimeout(() => {
             fitty(currentCaseCountElm);
         }, 1000 / 60);
     });
 
-    if (window.location.hash == '#news') {
+    if (window.location.hash == '#calculator') {
+        fireDOMEvent(calculatorBtn, 'click');
+    } else if (window.location.hash == '#news') {
         fireDOMEvent(newsBtn, 'click');
-    } else if (window.location.hash == '#cases') {
-        fireDOMEvent(casesAndAboutBtn, 'click');
     }
 })();

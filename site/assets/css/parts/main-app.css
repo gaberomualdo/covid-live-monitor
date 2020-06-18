@@ -183,6 +183,12 @@
     border-radius: 4px;
 }
 
+@media only screen and (max-width: 600px) {
+    .panel.main-app .tabs > section.overview .video-container {
+        height: 15rem;
+    }
+}
+
 /* stock section
 
 /* stock widget
