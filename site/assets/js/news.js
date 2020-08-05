@@ -4,55 +4,55 @@ const newsListElm = document.querySelector('.panel.latest-news .news-list');
 
 // get ip address to infer location if possible
 (() => {
-    fetch('https://ipapi.co/json/')
-        .then(response => {
-            response.text().then(text => {
-                // infer country code from list of possible country codes
-                const responseObj = JSON.parse(text);
-                const possibleCountryCodes = 'ae ar at au be bg br ca ch cn co cu cz de eg fr gb gr hk hu id ie il in it jp kr lt lv ma mx my ng nl no nz ph pl pt ro rs ru sa se sg si sk th tr tw ua us ve za'.split(
-                    ' '
-                );
-                const responseCountryCode = responseObj['country_code'].toLowerCase();
-                if (possibleCountryCodes.indexOf(responseCountryCode) > -1) {
-                    newsCountrySelectBoxElm.value = responseCountryCode;
-                } else {
-                    // if no match found, use USA as default country
-                    newsCountrySelectBoxElm.value = 'us';
-                }
+  fetch('https://ipapi.co/json/')
+    .then((response) => {
+      response.text().then((text) => {
+        // infer country code from list of possible country codes
+        const responseObj = JSON.parse(text);
+        const possibleCountryCodes = 'ae ar at au be bg br ca ch cn co cu cz de eg fr gb gr hk hu id ie il in it jp kr lt lv ma mx my ng nl no nz ph pl pt ro rs ru sa se sg si sk th tr tw ua us ve za'.split(
+          ' '
+        );
+        const responseCountryCode = responseObj['country_code'].toLowerCase();
+        if (possibleCountryCodes.indexOf(responseCountryCode) > -1) {
+          newsCountrySelectBoxElm.value = responseCountryCode;
+        } else {
+          // if no match found, use USA as default country
+          newsCountrySelectBoxElm.value = 'us';
+        }
 
-                fireDOMEvent(newsCountrySelectBoxElm, 'change');
+        fireDOMEvent(newsCountrySelectBoxElm, 'change');
 
-                // show select box
-                newsCountrySelectBoxElm.style.display = 'block';
-            });
-        })
-        .catch(err => {
-            console.error(err.message);
-            newsCountrySelectBoxElm.value = 'us';
-            fireDOMEvent(newsCountrySelectBoxElm, 'change');
-        });
+        // show select box
+        newsCountrySelectBoxElm.style.display = 'block';
+      });
+    })
+    .catch((err) => {
+      console.error(err.message);
+      newsCountrySelectBoxElm.value = 'us';
+      fireDOMEvent(newsCountrySelectBoxElm, 'change');
+    });
 })();
 
 // load news articles when country select is updated
 newsCountrySelectBoxElm.addEventListener('change', () => {
-    const countryCode = newsCountrySelectBoxElm.value;
-    fetch(`https://newsapi.org/v2/top-headlines?country=${countryCode}&q=corona%20virus&apiKey=${newsAPIKey}`)
-        .then(response => {
-            response.text().then(text => {
-                const responseObj = JSON.parse(text);
+  const countryCode = newsCountrySelectBoxElm.value;
+  fetch(`/server/news.php?country=${countryCode}`)
+    .then((response) => {
+      response
+        .json()
+        .then((responseObj) => {
+          // remove existing content of news list
+          newsListElm.innerHTML = '';
 
-                // remove existing content of news list
-                newsListElm.innerHTML = '';
+          // loop through articles and add to news list elm
+          const articles = responseObj['articles'];
+          articles.forEach((article, index) => {
+            if (index <= 10) {
+              let articleTitle = article['title'].split('-');
+              articleTitle.pop();
+              articleTitle = articleTitle.join('-');
 
-                // loop through articles and add to news list elm
-                const articles = responseObj['articles'];
-                articles.forEach((article, index) => {
-                    if (index <= 10) {
-                        let articleTitle = article['title'].split('-');
-                        articleTitle.pop();
-                        articleTitle = articleTitle.join('-');
-
-                        newsListElm.innerHTML += `
+              newsListElm.innerHTML += `
                         <hr>
                         <a href="${article['url']}" class="article" target="_blank">
                             <p class="top">
@@ -63,22 +63,39 @@ newsCountrySelectBoxElm.addEventListener('change', () => {
                             <h1 class="title">${articleTitle}</h1>
                         </a>
                         `;
-                    }
-                });
+            }
+          });
 
-                // display no articles found if article length is 0
-                if (articles.length == 0) {
-                    newsListElm.innerHTML = `<em style="display: block;opacity: .7;font-size: .85rem;text-align: center;margin-top: 1rem;">No Articles Found in Selected Country</em>`;
-                }
+          // display no articles found if article length is 0
+          if (articles.length == 0) {
+            newsListElm.innerHTML = `<em style="display: block;opacity: .7;font-size: .85rem;text-align: center;margin-top: 1rem;">No Articles Found in Selected Country</em>`;
+          }
 
-                // news has loaded, update var if needed
-                if (partsThatAreLoaded.indexOf('news') == -1) {
-                    partsThatAreLoaded.push('news');
-                    checkIfAllPartsAreLoaded();
-                }
-            });
+          // news has loaded, update var if needed
+          if (partsThatAreLoaded.indexOf('news') == -1) {
+            partsThatAreLoaded.push('news');
+            checkIfAllPartsAreLoaded();
+          }
         })
-        .catch(err => {
-            console.error(err.message);
+        .catch((err) => {
+          console.error(err.message);
+          newsListElm.innerHTML = '<p style="margin-top: 1rem;">Sorry, an error occurred fetching latest articles.</p>';
+
+          // news has loaded, update var if needed
+          if (partsThatAreLoaded.indexOf('news') == -1) {
+            partsThatAreLoaded.push('news');
+            checkIfAllPartsAreLoaded();
+          }
         });
+    })
+    .catch((err) => {
+      console.error(err.message);
+      newsListElm.innerHTML = '<p style="margin-top: 1rem;">Sorry, an error occurred fetching latest articles.</p>';
+
+      // news has loaded, update var if needed
+      if (partsThatAreLoaded.indexOf('news') == -1) {
+        partsThatAreLoaded.push('news');
+        checkIfAllPartsAreLoaded();
+      }
+    });
 });

@@ -414,7 +414,6 @@
         <!-- scripts -->
         <script src="assets/js/fitty.js"></script>
         <script src="assets/js/moment.js"></script>
-        <script src="assets/js/api_keys.js"></script>
         <script src="assets/js/main.js"></script>
         <script src="assets/js/app.js"></script>
         <script src="assets/js/masthead.js"></script>
