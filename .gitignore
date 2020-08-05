@@ -6,3 +6,4 @@ scrapers/who_live/node_modules
 */*/*/.DS_Store
 */*/*/*/.DS_Store
 */*/*/*/*/.DS_Store
+site/server/api_keys.php

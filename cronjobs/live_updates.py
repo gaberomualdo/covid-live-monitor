@@ -1,10 +1,6 @@
 """
-This file runs a basic cronjob every 10 minutes to send a request to a local Node.js server
-which scrapes the WHO coronavirus site and gets a video URL of the latest virus press
-release.
-
-It then sends the scraped URL to a PHP server which writes that data to a JS file
-for the site.
+This file runs a basic cronjob every day to send a request to a PHP server
+that gets and updates the current live WHO video.
 """
 
 import schedule
@@ -12,26 +8,22 @@ import requests
 from datetime import date, datetime
 from time import gmtime, strftime, sleep
 
-# function to be run every 10 minutes
-def update_current_cases():
-    # send initial request to local Node.js server
-    request = requests.get("http://localhost:7001/")
-    if(request.status_code == 200):
-        # send response (as GET variable) of that request to the PHP server
-        finalRequest = requests.get("https://covid19.xtrp.io/server/get_live_updates.php?src=" + request.text)
-        if(finalRequest.status_code == 200):
-            print("Success " + request.text)
-        else:
-            print("ERROR: " + str(finalRequest.status_code))
-    else:
+countries = ["ae","ar","at","au","be","bg","br","ca","ch","cn","co","cu","cz","de","eg","fr","gb","gr","hk","hu","id","ie","il","in","it","jp","kr","lt","lv","ma","mx","my","ng","nl","no","nz","ph","pl","pt","ro","rs","ru","sa","se","sg","si","sk","th","tr","tw","ua","us","ve","za"];
+
+# function to be run every minute
+def live_updates():
+      request = requests.get("https://covid19.xtrp.io/server/get_live_updates.php")
+      if(request.status_code == 200):
+        print('Successful request with message: ' + request.text)
+      else:
         print("ERROR: " + str(request.status_code))
 
-# run function
-update_current_cases()
+# run function initially
+live_updates()
 
-# run function every 10 minutes
-schedule.every(10).minutes.do(update_current_cases)
+# start and run cronjob
+schedule.every().day.at("12:00").do(live_updates)
 
 while True:
-    schedule.run_pending()
-    sleep(30)
+  schedule.run_pending()
+  sleep(20)

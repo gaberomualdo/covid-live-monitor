@@ -1,192 +1,225 @@
 /* main app panel */
 .panel.main-app {
-    max-height: calc(100vh - 8.25rem);
-    overflow-y: scroll;
-    position: relative;
-    padding-top: 0;
+  max-height: calc(100vh - 8.25rem);
+  height: calc(100vh - 8.25rem);
+  position: relative;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 @media only screen and (max-width: 1050px) {
-    .panel.main-app {
-        max-height: none;
-        overflow-y: hidden;
-    }
+  .panel.main-app {
+    height: auto;
+    max-height: none;
+    overflow-y: hidden;
+  }
 }
 
 /* tabselect functionality */
 .panel.main-app {
-    padding-top: 0.5rem;
+  padding-top: 0.5rem;
 }
 .panel.main-app .tab-select {
-    min-height: 2rem;
-    list-style: none;
-    margin-bottom: 1.4rem;
+  flex-basis: 2rem;
+  flex-shrink: 0;
+  list-style: none;
+  margin-top: 0.5rem;
+  margin-bottom: 1.4rem;
+  display: block;
+  font-size: 0;
 }
 .panel.main-app .tab-select li {
-    height: 2rem;
-    box-sizing: border-box;
-    display: inline-block;
-    margin-right: 0.75rem;
-    border-bottom: 2px solid var(--subdark-color);
-    line-height: calc(2rem - 2px);
-    padding: 0 0.25rem;
-    cursor: pointer;
-    opacity: 0.8;
-    transition: opacity 0.2s, border-color 0.2s;
-    user-select: none;
-    margin-top: 0.5rem;
+  font-size: 1rem;
+  height: 2rem;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: 1rem;
+  border-bottom: 2px solid var(--subdark-color);
+  line-height: calc(2rem - 2px);
+  padding: 0 0.25rem;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s, border-color 0.2s;
+  user-select: none;
 }
 .panel.main-app .tab-select li:hover {
-    opacity: 1;
-    border-color: var(--supermedium-color);
+  opacity: 1;
+  border-color: var(--supermedium-color);
 }
 
 .panel.main-app.overview-active .tab-select li.overview,
 /*.panel.main-app.stock-active .tab-select li.stock,*/
 .panel.main-app.health-active .tab-select li.health {
-    border-color: var(--white-color);
-    opacity: 1;
-    font-weight: 600;
+  border-color: var(--white-color);
+  opacity: 1;
+  font-weight: 600;
 }
 
 .panel.main-app .tabs > section {
-    display: none;
+  display: none;
 }
 
 .panel.main-app.overview-active .tabs > section.overview,
 /*.panel.main-app.stock-active .tabs > section.stock,*/
 .panel.main-app.health-active .tabs > section.health {
-    display: block;
+  display: block;
 }
 
 @media only screen and (max-width: 550px) {
-    .panel.main-app .tab-select li {
-        margin-right: 0.25rem;
-    }
-    .panel.main-app .tab-select li span {
-        display: none;
-    }
+  .panel.main-app .tab-select li {
+    margin-right: 0.25rem;
+  }
+  .panel.main-app .tab-select li span {
+    display: none;
+  }
 }
 
 .panel.main-app .tabs > section .panel-title {
-    line-height: 1.5;
-    /*    border-bottom: 1px solid var(--regular-color);*/
-    margin-bottom: 0.95rem !important;
+  line-height: 1.5;
+  /*    border-bottom: 1px solid var(--regular-color);*/
+  margin-bottom: 0.95rem !important;
 }
 
 .panel.main-app .tabs > section .sources {
-    font-size: 0.9rem;
-    opacity: 0.7;
-    overflow: hidden;
-    padding-top: 1rem;
-    border-top: 1px solid var(--supermedium-color);
+  font-size: 0.9rem;
+  opacity: 0.7;
+  overflow: hidden;
+  padding-top: 1rem;
+  border-top: 1px solid var(--supermedium-color);
 }
 
 .panel.main-app .tabs > section * {
-    line-height: 1.5;
+  line-height: 1.5;
 }
 
 .panel.main-app .tabs > section > *:not(:last-child),
 .panel.main-app .tabs > section > .sources > *:not(:last-child) {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .panel.main-app .tabs > section a {
-    text-decoration: none;
-    font-weight: 600;
+  text-decoration: none;
+  font-weight: 600;
 }
 .panel.main-app .tabs > section a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .panel.main-app .tabs > section > ul {
-    margin-left: 3rem;
+  margin-left: 3rem;
 }
 
 @media only screen and (max-width: 600px) {
-    .panel.main-app .tabs > section > ul {
-        margin-left: 1.5rem;
-    }
+  .panel.main-app .tabs > section > ul {
+    margin-left: 1.5rem;
+  }
 }
 
 .panel.main-app .tabs > section > ul > li {
-    color: var(--somewhat-submedium-color);
+  color: var(--somewhat-submedium-color);
 }
 .panel.main-app .tabs > section > ul > li strong {
-    color: var(--white-color);
+  color: var(--white-color);
 }
 
 .panel.main-app .tabs > section > ul > li:not(:last-child) {
-    margin-bottom: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 
 /* styled links */
 .panel.main-app .tabs > section .styled-link {
-    display: block;
-    float: left;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0.5rem 0.75rem;
-    border: 1px solid var(--regular-color);
-    border-radius: 4px;
-    min-height: 3rem;
-    opacity: 0.7;
-    transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s !important;
-    backface-visibility: hidden;
-    text-decoration: none !important;
+  display: block;
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--regular-color);
+  border-radius: 4px;
+  min-height: 3rem;
+  opacity: 0.7;
+  transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s !important;
+  backface-visibility: hidden;
+  text-decoration: none !important;
 }
 .panel.main-app .tabs > section .styled-link:not(:last-child) {
-    margin-bottom: 1.15rem;
+  margin-bottom: 1.15rem;
 }
 .panel.main-app .tabs > section .styled-link:hover {
-    opacity: 1;
-    transform: translateY(-1px);
-    box-shadow: 0 0.25rem 1rem var(--shadow-color);
+  opacity: 1;
+  transform: translateY(-1px);
+  box-shadow: 0 0.25rem 1rem var(--shadow-color);
 }
 .panel.main-app .tabs > section .styled-link:active {
-    box-shadow: 0 0.125rem 0.5rem var(--shadow-color);
-    transform: translateY(0);
+  box-shadow: 0 0.125rem 0.5rem var(--shadow-color);
+  transform: translateY(0);
 }
 
 .panel.main-app .tabs > section .styled-link > * {
-    display: inline-block;
-    min-height: 2rem;
-    line-height: 2rem;
-    vertical-align: top;
+  display: inline-block;
+  min-height: 2rem;
+  line-height: 2rem;
+  vertical-align: top;
 }
 .panel.main-app .tabs > section .styled-link > span {
-    margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 .panel.main-app .tabs > section .styled-link > svg {
-    height: 2rem;
-    width: auto;
-    transform: scale(0.85) translateY(-0.075rem);
-    fill: var(--white-color);
+  height: 2rem;
+  width: auto;
+  transform: scale(0.85) translateY(-0.075rem);
+  fill: var(--white-color);
+}
+
+/* live updates section */
+.panel.main-app.overview-active .tabs {
+  display: flex !important;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+.panel.main-app.overview-active .tabs > section.overview {
+  display: flex !important;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+
+@media only screen and (max-width: 1050px) {
+  .panel.main-app .tabs > section.overview {
+    flex-basis: 75vh !important;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .panel.main-app .tabs > section.overview {
+    flex-basis: 50vh !important;
+  }
 }
 
 /* live updates section styled links */
 @media only screen and (min-width: 830px) {
-    .panel.main-app .tabs > section.overview .styled-link {
-        width: calc(50% - (1.25rem / 2));
-        margin-bottom: 0;
-    }
-    .panel.main-app .tabs > section.overview .styled-link:not(:last-child) {
-        margin-right: 1.25rem;
-    }
+  .panel.main-app .tabs > section.overview .styled-link {
+    width: calc(50% - (1.25rem / 2));
+    margin-bottom: 0;
+  }
+  .panel.main-app .tabs > section.overview .styled-link:not(:last-child) {
+    margin-right: 1.25rem;
+  }
 }
 
 /* live updates section video container */
 .panel.main-app .tabs > section.overview .video-container {
-    height: 27.5rem;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 4px;
+  flex-basis: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-right: auto;
+  margin-left: auto;
+  flex-grow: 1;
+  position: relative;
 }
-
-@media only screen and (max-width: 600px) {
-    .panel.main-app .tabs > section.overview .video-container {
-        height: 15rem;
-    }
+.panel.main-app .tabs > section.overview .video-container iframe {
+  position: absolute;
 }
 
 /* stock section
