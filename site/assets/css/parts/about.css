@@ -1,22 +1,22 @@
 .panel.about .panel-title {
-    margin-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 .panel.about p {
-    font-size: 0.8rem;
-    line-height: 1.75;
-    opacity: 0.95;
+  font-size: 0.8rem;
+  line-height: 1.75;
+  opacity: 0.95;
 }
 .panel.about p:not(:last-child) {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .panel.about a {
-    font-weight: 600;
-    text-decoration: none;
-    display: inline-block;
-    transition: transform 0.2s;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline;
+  transition: transform 0.2s;
 }
 .panel.about a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
