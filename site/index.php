@@ -412,12 +412,12 @@
         <script src="server/live_updates_data.js?v=<?php echo uniqid(); ?>"></script>
 
         <!-- scripts -->
-        <script src="assets/js/fitty.js"></script>
-        <script src="assets/js/moment.js"></script>
-        <script src="assets/js/main.js"></script>
-        <script src="assets/js/app.js"></script>
-        <script src="assets/js/masthead.js"></script>
-        <script src="assets/js/news.js"></script>
-        <script src="assets/js/current_cases.js"></script>
+        <script src="assets/js/fitty.js?v=1"></script>
+        <script src="assets/js/moment.js?v=1"></script>
+        <script src="assets/js/main.js?v=1"></script>
+        <script src="assets/js/app.js?v=1"></script>
+        <script src="assets/js/masthead.js?v=1"></script>
+        <script src="assets/js/news.js?v=1"></script>
+        <script src="assets/js/current_cases.js?v=1"></script>
     </body>
 </html>

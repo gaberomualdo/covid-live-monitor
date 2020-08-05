@@ -6,31 +6,31 @@ const currentCaseCountLastUpdatedElm = document.querySelector('.panel.current-ca
 
 // set current case count and last updated
 (() => {
-    // current case count
-    const numberParts = numberWithCommas(parseInt(totalCurrentCases)).split(',');
-    let finalCurrentCaseCountHTML = '';
+  // current case count
+  const numberParts = numberWithCommas(parseInt(totalCurrentCases)).split(',');
+  let finalCurrentCaseCountHTML = '';
 
-    numberParts.forEach((part, ind) => {
-        finalCurrentCaseCountHTML += `<span>${part}</span>`;
-        if (ind < numberParts.length - 1) {
-            finalCurrentCaseCountHTML += ',';
-        }
-    });
+  numberParts.forEach((part, ind) => {
+    finalCurrentCaseCountHTML += `<span>${part}</span>`;
+    if (ind < numberParts.length - 1) {
+      finalCurrentCaseCountHTML += ',';
+    }
+  });
 
-    currentCaseCountElm.innerHTML = finalCurrentCaseCountHTML;
+  currentCaseCountElm.innerHTML = finalCurrentCaseCountHTML;
 
-    // last updated
-    currentCaseCountLastUpdatedElm.innerText = 'Updated ' + moment(totalCurrentCasesLastUpdated).calendar();
+  // last updated
+  currentCaseCountLastUpdatedElm.innerText = 'Updated ' + moment(totalCurrentCasesLastUpdated).fromNow();
 
-    // deaths and recoveries
-    deathsCountElm.innerHTML = `<strong>${numberWithCommas(parseInt(totalDeaths))}</strong> (${Math.floor(
-        (parseInt(totalDeaths) / parseInt(totalCurrentCases)) * 100
-    ).toString()}%)`;
-    recoveriesCountElm.innerHTML = `<strong>${numberWithCommas(parseInt(totalRecoveries))}</strong> (${Math.floor(
-        (parseInt(totalRecoveries) / parseInt(totalCurrentCases)) * 100
-    ).toString()}%)`;
+  // deaths and recoveries
+  deathsCountElm.innerHTML = `<strong>${numberWithCommas(parseInt(totalDeaths))}</strong> (${Math.floor(
+    (parseInt(totalDeaths) / parseInt(totalCurrentCases)) * 100
+  ).toString()}%)`;
+  recoveriesCountElm.innerHTML = `<strong>${numberWithCommas(parseInt(totalRecoveries))}</strong> (${Math.floor(
+    (parseInt(totalRecoveries) / parseInt(totalCurrentCases)) * 100
+  ).toString()}%)`;
 })();
 
 window.addEventListener('load', () => {
-    fitty(currentCaseCountElm);
+  fitty(currentCaseCountElm);
 });
