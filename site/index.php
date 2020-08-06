@@ -53,7 +53,7 @@
             <div class="loader-inner"></div>
         </div>
         <div class="container cases-about-active" style="opacity: 0;">
-            <p class="built-by"><a href="https://github.com/xtrp/Coronavirus-Live-Monitor">Star on GitHub</a> &nbsp;&bull;&nbsp; Built by <a href="https://xtrp.io/">Fred Adams</a></p>
+            <p class="built-by"><a href="https://github.com/xtrp/Coronavirus-Live-Monitor">Star on GitHub</a> &nbsp;&bull;&nbsp; Built by <a href="https://xtrp.io/">Gabriel Romualdo</a></p>
             <nav class="row top">
                 <div class="panel masthead">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -108,10 +108,11 @@
                     <div class="panel stats">
                         <p class="recoveries"><strong>Recoveries:</strong><span></span></p>
                         <p class="deaths"><strong>Deaths:</strong><span></span></p>
+                        <p class="active"><strong>Active:</strong><span></span></p>
                     </div>
                     <div class="panel about">
                         <p>Total cases, deaths, and recoveries data from <a href="https://www.worldometers.info/coronavirus/" target="_blank">WorldoMeters</a>, which gets data from sources such as <a href="http://who.int/" target="_blank">The WHO</a>.</p>
-                        <p>Rates (percentages) are calculated by dividing the current amount of recoveries/deaths by the current amount of total cases.</p>
+                        <p>Rates (percentages) are calculated by dividing the current amount of recoveries/deaths/active by the current amount of total cases.</p>
                     </div>
                     <div class="panel links">
                         <a href="https://github.com/xtrp/Coronavirus-Live-Monitor" target="_blank" class="github-repo">
@@ -124,8 +125,8 @@
                         </a>
                         <hr />
                         <a href="https://xtrp.io/" target="_blank" class="creator">
-                            <span class="text">Built By <span class="link">Fred Adams</span></span>
-                            <img src="assets/img/creator.png" alt="Fred Adams Picture" />
+                            <span class="text">Built By <span class="link">Gabriel Romualdo</span></span>
+                            <img src="assets/img/creator.png" alt="Gabriel Romualdo Picture" />
                         </a>
                     </div>
                 </div>
