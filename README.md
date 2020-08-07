@@ -34,6 +34,6 @@ Your new hub for news, information, and latest updates about the Coronavirus (CO
 
 ## License and Credits
 
-Coronavirus Live Monitor was built solely by web developer and student [Fred Adams](https://xtrp.io/).
+Coronavirus Live Monitor was built solely by web developer and student [Gabriel Romualdo](https://xtrp.io/).
 
 The code is completely OSS and is MIT Licensed. See LICENSE.txt for details.
